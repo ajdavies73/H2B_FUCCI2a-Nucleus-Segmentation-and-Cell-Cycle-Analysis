@@ -1,12 +1,16 @@
 # H2B-FUCCI-2a-CellProfiler
 
-## CellProfiler pipeline
+## CellProfiler Method
 
-## Example Excel spreadsheet for pooling results from different conditions and background subtraction
+### CellProfiler pipeline
 
-## Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
+### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
-## R script to merge images into a single folder
+### Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
+
+### R script to merge images into a single folder
+
+## ImageJ/FIJI Method
 
 ## FUCCI thresholding code
 
