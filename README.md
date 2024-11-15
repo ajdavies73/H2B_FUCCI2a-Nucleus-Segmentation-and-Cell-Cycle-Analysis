@@ -4,6 +4,8 @@
 
 ## Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
+## Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
+
 ## R script to merge images into a single folder
 
 ## FUCCI thresholding code
