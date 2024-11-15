@@ -2,6 +2,8 @@
 
 ## CellProfiler pipeline
 
+## Example Excel spreadsheet for pooling results from different conditions and background subtraction
+
 ## R script to merge images into a single folder
 
 ## FUCCI thresholding code
