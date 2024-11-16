@@ -9,7 +9,7 @@ Endogenous Cdt1, a nuclear protein, increases in abundance from late mitosis thr
 This results in an accumulation of the mCherry-hCdt1 probe in G1 and accumulation of the mVenus-hGeminin probe in S/G2/M phases. H2B_FUCCI2a_MCF7 cells therefore fluoresce red in G1, yellow in early S (where both mCherry-hCdt1 and mVenus-hGeminin are detectable) and green in late S/G2/M phases. By analysing the relative fluorescence of mCherry-hCdt1 and mVenus-hGeminin, and thus their relative abundances, it is possible to estimate the cell cycle phase of each individual cell. This can be used to assess changes in overall cell cycle distribution of a population of cells relative to control.
 
 <br>
-<img src="https://github.com/user-attachments/assets/53db4b53-6f66-4c51-bb09-ac9e11d1d791" width="600">
+<img src="https://github.com/user-attachments/assets/53db4b53-6f66-4c51-bb09-ac9e11d1d791" width="600" text.align="center">
 <img src="https://github.com/user-attachments/assets/823e9d71-392a-4904-9fb9-36390cbf7aad" width="600">
 
 #### Fig. 1 H2B_FUCCI2a_MCF7 cells expressing the H2B_FUCCI2a tricistronic cell cycle reporter system. 
