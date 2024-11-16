@@ -59,6 +59,8 @@ Graphical representation:
 <br>
 <br>
 <img src="https://github.com/user-attachments/assets/25adf5d9-72d8-42d7-9618-e6a83d7bb006" width="700">
+#### Fig. 2 Schematic representation of the method used to determine the overall 'colour' of the nucleus of a single H2B_FUCCI2a_MCF7 cell. 
+Orange dashed lines indicate the mean mCherry or mVenus fluorescence intensity values across the population of control cells (GL2i-transfected) for each biological replicate of the experiment. Nuclei were classified as ‘red’ (corresponding to G1 phase cells) if their mean mCherry-hCdt1 fluorescent signal was greater than the median value for the control population and their mean mVenus-hGeminin fluorescent signal was less than the median for the control population. Nuclei were classified as ‘green’ (corresponding to late S/G2/M phase cells) if their mean mVenus-hGeminin fluorescent signal was greater than the median value for the control population and their mean mCherry-hCdt1 fluorescent signal was less than the median value for the control population. Nuclei were classified as yellow (corresponding to early S phase cells) if both their mean mCherry-hCdt1 and mVenus-hGeminin signals were greater than the median values for the control population. Nuclei were classified as ‘no colour’ where both their mean mCherry-hCdt1 and mVenus-hGeminin signals were less than the median values for the control population.
 
 ## Other analysis
 
