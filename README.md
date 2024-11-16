@@ -37,6 +37,10 @@ CellProfiler pipeline developed by Amelie Davies, February 2024, for segmentatio
 
 ### R script to merge images into a single folder
 
+This script can be used to merge several TIFF files into a single folder containing all image files, where each TIFF file is stored by the microscope/MicroManager in separate folders. This allows batch uploading of image files into the CellProfiler pipeline (e.g. to allow automatic analysis of all images for a single condition simultaneously).
+
+N.B. the source directory containing image folders and the desired target directory for all image files will need to be manually specified according to your computer and file structure.
+
 ## ImageJ/FIJI Method
 
 # Analysing per-nucleus intensity data to assess cell cycle phases and progression
