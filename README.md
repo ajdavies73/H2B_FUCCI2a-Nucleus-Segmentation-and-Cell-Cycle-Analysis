@@ -1,5 +1,11 @@
 # H2B-FUCCI-2a-CellProfiler
 
+Methods to obtain measurements for per-nucleus and background fluorescence intensities in each channel:
+1. CellProfiler pipeline
+2. ImageJ segmentation method
+
+Highlight advantages/disadvantages of each.
+
 ## CellProfiler Method
 
 ### CellProfiler pipeline
