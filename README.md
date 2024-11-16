@@ -46,6 +46,7 @@ N.B. your .csv file for the condition to be analysed must be formatted as two co
 You may need to install the package 'tidyverse' before running this script; this can be done using the command install.packages("tidyverse") in the console.
 
 Graphical representation:
+<br>
 <img src="https://github.com/user-attachments/assets/25adf5d9-72d8-42d7-9618-e6a83d7bb006" width="700">
 
 ## Other analysis
