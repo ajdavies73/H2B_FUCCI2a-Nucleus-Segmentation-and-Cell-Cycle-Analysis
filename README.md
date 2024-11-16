@@ -4,7 +4,7 @@ This repository contains two example workflows for segmentation of nuclei in epi
 
 This repository showcases the basis of these two workflows, an automated method using a purpose-built CellProfiler pipeline and a manual method for ImageJ/FIJI. Step-by-step instructions are provided for each method. ALl programs/scripts are available to download from the appropriate folders in the repository, and example datasets and analyses are also provided in these folders.
 
-These workflows were developed in the Lindon group at the University of Cambridge (https://www.phar.cam.ac.uk/research/lindon) to automate segmentation of nuclei and measurement of per-nucleus mCherry-hCdt1 and mVenus-hGeminin fluorescence across a large number of live-cell epifluorescence images obtained from an Olympus IX81 microscope with a 40X NA 1.3 oil immersion objective. However, the workflows presented could also be applied to other FUCCI2a imaging data.
+These workflows were developed in the Lindon group at the University of Cambridge (https://www.phar.cam.ac.uk/research/lindon) to automate segmentation of nuclei and measurement of per-nucleus mCherry-hCdt1 and mVenus-hGeminin fluorescence across a large number of live-cell epifluorescence images. These images were obtained from an Olympus IX81 microscope with a 40X NA 1.3 oil immersion objective. However, the workflows presented could also be applied to other FUCCI2a imaging data.
 
 ### What's in this repository?
 **Section 1A** - Files needed for CellProfiler method to automate segmentation of nuclei and measurement of per-nucleus mCherry-hCdt1 and mVenus-hGeminin fluorescence across a large number of live-cell epifluorescence images simultaneously
