@@ -69,7 +69,7 @@ Plot log(mVenus/mCherry) ratio relative to GL2i
 
 Look at stats for each and example data/figures
 
-Written by Amélie Davies, March 2024 and updated November 2024.
+Written by Amelie Davies, March 2024 and updated November 2024.
 <br>
 All files, images and data belong to Lindon Group, Department of Pharmacology, University of Cambridge, UK.
 <br>
