@@ -18,6 +18,8 @@ Highlight advantages/disadvantages of each.
 
 ## ImageJ/FIJI Method
 
+## Analysing per-nucleus intensity data to assess cell cycle phases and progression
+
 ## FUCCI thresholding code
 
 This script can be used to classify nuclei from a single condition as red (corresponding to G1 phase), green (S/G2/M phase), yellow (S phase) or no-colour (G0). The proportions of nuclei of each colour in the sample are calculated and plotted as a stacked bar chart.
