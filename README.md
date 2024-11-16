@@ -72,14 +72,12 @@ Look at stats for each and example data/figures
 Written by Amélie Davies, March 2024 and updated November 2024.
 <br>
 All files, images and data belong to Lindon Group, Department of Pharmacology, University of Cambridge, UK.
-
-Copyright 2024, Amelie Davies
+<br>
+&copy; Copyright 2024, Amelie Davies.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
+You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
