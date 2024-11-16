@@ -1,5 +1,7 @@
 # H2B-FUCCI-2a-CellProfiler
 
+What is this set of protocols, what does it do, what is it for
+
 ### Introduction to the FUCCI2a reporter system in H2B_FUCCI2a_MCF7 cells
 
 H2B_FUCCI2a_MCF7 is a human breast adenocarcinoma cell line stably expressing the tricistronic Fluorescent Ubiquitination-based Cell-cycle Indicator (FUCCI) 2a reporter system, as shown in Fig. 1 below. This was generated using the Invitrogen™ FlpIn™ system (Matthew Ford, University of Edinburgh, 2017, https://era.ed.ac.uk/handle/1842/23658; Mort et al., 2014, https://doi.org/10.4161/15384101.2015.945381). This reporter system consists of the coding sequences of mCerulean fused to histone H2B (mCerulean-H2B), mCherry fused to amino acid residues 30-120 of hCdt1 (mCherry-hCdt1(30/120), henceforth referred to as mCherry-hCdt1) and mVenus fused to amino acid residues 1-110 of hGeminin (mVenus-hGeminin(1/110), henceforth referred to as mVenus-hGeminin). These coding sequences are fused by those of porcine Teschovirus-1 2a (P2a) and Thosea asigna virus 2a (T2a) self-cleaving peptides, which separate the three fusion proteins following translation. Expression of this construct is under the control of a CAG constitutive promoter, and cells express equimolar quantities of mCerulean-H2B, mCherry-hCdt1 and mVenus-hGeminin.
