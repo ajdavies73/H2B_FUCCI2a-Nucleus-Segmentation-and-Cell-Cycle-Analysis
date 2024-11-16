@@ -19,14 +19,14 @@ This results in an accumulation of the mCherry-hCdt1 probe in G1 and accumulatio
 
 _**Fig. 1: H2B_FUCCI2a_MCF7 cells expressing the H2B_FUCCI2a tricistronic cell cycle reporter system.** **(A)** Schematic depiction of the H2B_FUCCI2a tricistronic construct stably expressed by the H2B_FUCCI2a_MCF7 cell line used in this experiment. Figure created with BioRender.com. **(B)** Schematic representation of the overall ‘colour’ of the H2B_FUCCI2a_MCF7 cell nuclei throughout the cell cycle based on the relative levels of mCherry-hCdt1 and mVenus-hGeminin. Figure created with BioRender.com. **(C)** Representative 40X epifluorescence image of a sample of GL2i-treated cells, showing the differential interference contrast (DIC) image overlaid with the epifluorescence images of mCerulean-H2B, mCherry-hCdt1 and mVenus-hGeminin. **(D)** Merge of the DIC image and the epifluorescence images in each of the three channels. **(E)** Merge of the DIC image and the epifluorescence images in the RFP (mCherry-hCdt1) and YFP (mVenus-hGeminin) channels, showing the overall ‘colour’ of the nuclei in the sample based on the relative levels of mCherry-hCdt1 and mVenus-hGeminin in each cell. Arrow 1 demonstrates a ‘green’ nucleus in S/G2/M phase in which the fluorescent signal and thus level of mVenus-hGeminin exceeds that of mCherry-hCdt1; arrow 2 demonstrates a ‘red’ nucleus in G1 phase in which the fluorescent signal and thus level of mCherry-hCdt1 exceeds that of mVenus-hGeminin; arrow 3 demonstrates a ‘yellow’ nucleus in early S phase in which the fluorescent signals of mVenus-hGeminin and mCherry-hCdt1 are approximately equal. **(F)** Merge of the epifluorescence images in the RFP (mCherry-hCdt1) and YFP (mVenus-hGeminin) channels. All scale bars represent 50 μm._
 
-# Section One - Methods to obtain per-nucleus and background fluorescence intensities in each channel
+# Section 1 - Methods to obtain per-nucleus and background fluorescence intensities in each channel
 
 1. CellProfiler pipeline
 2. ImageJ segmentation method
 
 Highlight advantages/disadvantages of each.
 
-## CellProfiler Method
+## Section 1A - CellProfiler Method
 
 ### CellProfiler pipeline
 
@@ -42,9 +42,9 @@ This script can be used to merge several TIFF files into a single folder contain
 
 N.B. the source directory containing image folders and the desired target directory for all image files will need to be manually specified according to your computer and file structure.
 
-## ImageJ/FIJI Method
+## Section 1B - ImageJ/FIJI Method
 
-# Section Two - Analysing per-nucleus intensity data to assess cell cycle phases and progression
+# Section 2 - Analysing per-nucleus intensity data to assess cell cycle phases and progression
 
 ## FUCCI thresholding code
 
