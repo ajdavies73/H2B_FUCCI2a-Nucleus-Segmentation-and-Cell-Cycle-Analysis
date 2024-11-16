@@ -18,7 +18,7 @@ Highlight advantages/disadvantages of each.
 
 ## ImageJ/FIJI Method
 
-## Analysing per-nucleus intensity data to assess cell cycle phases and progression
+# Analysing per-nucleus intensity data to assess cell cycle phases and progression
 
 ## FUCCI thresholding code
 
