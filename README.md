@@ -19,3 +19,14 @@ This script can be used to classify nuclei from a single condition as red (corre
 N.B. your .csv file for the condition to be analysed must be formatted as two columns with the headers 'RFPminusBG' and 'YFPminusBG'. These should contain the per-nucleus mean intensities of RFP and YFP fluorescence with the background RFP and YFP fluorescence intensity for the image subtracted respectively. Each row in the file should represent a single nucleus.
 
 You may need to install the package 'tidyverse' before running this script; this can be done using the command install.packages("tidyverse") in the console.
+
+Graphical representation:
+![image](https://github.com/user-attachments/assets/25adf5d9-72d8-42d7-9618-e6a83d7bb006)
+
+## Other analysis
+
+Excel - plotting RFP against YFP values for each nucleus, using distribution to estimate cell cycle position of cells
+Komolgorov-Smirnov line plots of RFP/YFP ratios against frequency
+Plot log(mVenus/mCherry) ratio relative to GL2i
+
+Look at stats for each and example data/figures
