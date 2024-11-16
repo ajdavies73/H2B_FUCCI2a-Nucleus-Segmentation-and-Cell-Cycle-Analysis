@@ -29,6 +29,8 @@ Highlight advantages/disadvantages of each.
 
 ### CellProfiler pipeline
 
+CellProfiler pipeline developed by Amelie Davies, February 2024, for segmentation of nuclei of H2B_FUCCI2a_MCF7 live cell epifluorescence images (cell line developed and described by Matthew Ford, University of Edinburgh, 2017 and Mort et al., 2014). The pipeline then measures fluorescent intensity of each channel in each nucleus automatically, as well as in a manually identified background region. The data is outputted as .csv files, and can be used to assess the position of each cell in the cell cycle based on the relative fluorescent intensities in the RFP and YFP channels, corresponding to mCherry-hCdt1 and mVenus-hGeminin levels respectively.
+
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
 ### Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
