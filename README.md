@@ -185,10 +185,11 @@ Where points are more clustered along the mCherry-hCdt1 (RFP) fluorescence x-axi
 
 In contrast, where points are more clustered along the mVenus-hGeminin (YFP) fluorescence x-axis when compared to control, this represents an increase in nuclei with mCherry-hCdt1 levels close to zero and higher levels of mVenus-hGeminin. This indicates an increase in the proportion of 'green' or S/G2/M phase cells, suggesting an S/G2/M phase arrest phenotype.
 
-Example:
-  <img src="https://github.com/user-attachments/assets/1b5819f0-e81d-4bdc-8aa0-e458edf90766" width = 400>
-
-
+Example scatter plot:
+<br>
+  <img src="https://github.com/user-attachments/assets/be277206-9001-45c1-b509-8ac2cec07df8" width = 400>
+_**Fig. 3: Representative scatter plot of per-nucleus values for intensity of fluorescence produced by mCherry-hCdt1 and mVenus-hGeminin (with subtracted image background fluorescence intensity)** Control nuclei are plotted as black squares and the experimental condition as orange circles overlaid on control data. In this example, points for the experimental condition (orange) are more clustered along the mCherry-hCdt1 (RFP) fluorescence x-axis than for the control. This represents an increase in nuclei with mVenus-hGeminin levels close to zero and higher levels of mCherry-hCdt1. This indicates an increase in the proportion of 'red'/G1 cells, suggesting a G1 arrest phenotype.
+<br>
 ## Examples of other analyses which can be performed on FUCCI data
 
 Komolgorov-Smirnov line plots of RFP/YFP ratios against frequency
