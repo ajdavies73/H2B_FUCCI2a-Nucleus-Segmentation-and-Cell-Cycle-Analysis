@@ -208,12 +208,12 @@ The plots and statistical analyses above were performed in GraphPad Prism 10.
 ## Author 
 
 Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
-<br>
+
 Contributors:
 - William Murphy
 - Annabel Cardno
 - Catherine Lindon
-<br>
+
 All files, images and data belong to Lindon Group, Department of Pharmacology, University of Cambridge, UK.
 <br>
 <br>
