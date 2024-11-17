@@ -1,4 +1,4 @@
-# H2B_FUCCI2a Cell Segmentation and Cell Cycle Analysis
+# H2B_FUCCI2a Nucleus Segmentation and Cell Cycle Analysis
 
 This repository contains two example workflows for segmentation of nuclei in epifluorescence images of live H2B_FUCCI2a_MCF7 cells, followed by per-nucleus and background measurements of fluorescence intensity in the RFP and YFP channels of the image. These values can be used to assess the relative levels of mCherry-hCdt1 and mVenus-hGeminin in each nucleus, from which the cell cycle position of individual cells in an image can be determined. This data is then used to assess changes in overall cell cycle distribution of a population of cells relative to control based on the relative proportions of 'red' (G1 phase), 'green' (S/G2/M phase), 'yellow' (early S phase) and 'no-colour' nuclei (G0).
 
