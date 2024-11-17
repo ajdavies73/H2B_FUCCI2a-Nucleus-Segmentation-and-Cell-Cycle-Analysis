@@ -37,10 +37,8 @@ _**Fig. 1: H2B_FUCCI2a_MCF7 cells expressing the H2B_FUCCI2a tricistronic cell c
 
 # Section 1 - Methods to obtain per-nucleus and background fluorescence intensities in each channel
 
-1. CellProfiler pipeline
-2. ImageJ segmentation method
-
-Highlight advantages/disadvantages of each.
+1. CellProfiler pipeline - this pipeline allows automatic segmentation of nuclei in a large number of images simultaneously. The per-nucleus intensity of fluorescence in each channel is measured automatically for each image and outputted as .csv files for downstream manipulation and data analysis. This is a high-throughput and less time-consuming method but generates a large number of unnecessary measurements which can make it difficult to find relevant data. This method is also more prone to errors in nucleus segmentation than manual detection in ImageJ as there is no option to review/refine automatically detected nucleus objects.
+2. ImageJ segmentation method - a protocol for automatic detection of nuclei using thresholding to segment nuclei, with manual refinement of detected nuclei. This reduces the chance of errors in nucleus detection, but is more time-consuming than the CellProfiler method and can only be used to analyse one image at a time.
 
 ## Section 1A - CellProfiler Method
 
