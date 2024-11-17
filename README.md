@@ -12,6 +12,7 @@ These workflows were developed in the Lindon group at the University of Cambridg
   - R script for merging images (.TIFF), often saved in individual folders following microscope image acquisition, into a single folder containing all .TIFF files for one experiment. This allows batch uploading of image files into CellProfiler for simultaneous analysis of all images obtained for a single condition or for all conditions in an experiment.
   
 **Section 1B** - Example protocol for manual segmentation of nuclei and measurement of per-nucleus mCherry-hCdt1 and mVenus-hGeminin fluorescence in ImageJ.
+  - Word document describing the protocol, also shown in Section 1B of this document.
 
 **Section 2** - Example downstream analyses that can be performed on data obtained from CellProfiler or ImageJ image analysis in order to assess cell cycle phase distribution of a sample of cells in each image.
   - R script for setting thresholds for background-corrected mCherry-hCdt1 and mVenus-hGeminin fluorescence levels in order to classify individual nuclei as 'red' (G1 phase), 'green' (S/G2/M phase), 'yellow' (early S phase) and 'no-colour' nuclei (G0). This script also calculates the proportion of nuclei in the total sample of each colour and therefore in each phase of the cell cycle, and plots as a stacked bar graph.
