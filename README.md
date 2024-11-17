@@ -87,7 +87,36 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. N.B. this module will not produce an output in test mode.
 18. In order to begin analysis of your images, click 'Exit Test Mode' and 'Analyze Images'. This will run an analysis on all uploaded images, and save measurements as .csv files in your default output folder.
 
-### Formatting the output of the CellProfiler pipeline
+#### Formatting the output of the CellProfiler pipeline:
+
+19.  Create a new Excel spreadsheet, with three tabs for each condition analysed (which should have been analysed separately in the CellProfiler pipeline, generating separate sets of .csv files for each condition). The three tabs should be as follows:
+  - Tab 1 - per-nucleus area and intensity measurements
+  - Tab 2 - per-image background intensity measurements
+  - Tab 3 - background-correction of per-nucleus intensity measurements and analysis
+21.  Open the NucleusSegmentation_FilteredNuclei.csv file for each condition. This displays measurements made for each filtered nucleus object from each image analysed in the pipeline. Copy the following columns into the associated sheet of the new Excel file for each condition:
+    - ImageNumber
+    - ObjectNumber
+    - AreaShape_Area
+    - Intensity_MeanIntensity_RFP
+    - Intensity_MeanIntensity_YFP
+22. Open the NucleusSegmentation_Background_Intensity.csv file for each condition, and copy the following columns into the associated sheet of the new Excel file for each condition:
+    - ImageNumber
+    - ObjectNumber
+    - Intensity_MeanIntensity_RFP
+    - Intensity_MeanIntensity_YFP
+23. In the analysis tab for each condition, copy the data for the per-image background values and per-nucleus intensity values into adjacent tables. Calculate the background-corrected intensoty values for each nucleus using the following formula in Excel:
+
+  [Cell containing raw intensity for this nucleus and channel]-INDEX([Cells containing background values for this channel], MATCH([Cell containing image number for this nucleus], [Cells containing image numbers for background values]))    
+  E.g. for the following data:
+  <img src="https://github.com/user-attachments/assets/8f554883-263e-4d34-ac3f-e144607d06a2">
+
+  For calculating the background-corrected RFP intensity for nucleus 1 of image 1 in cell I3, the formula would be:
+
+  =G3-INDEX($B$3:$B$7, MATCH(E3, $A$3:$A$7))
+
+  This finds the background value in the RFP channel for the image number matching the image number from which the nucleus in row 3 was taken, and subtracts it from the measured RFP intensity for that nucleus.
+  
+
 
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
