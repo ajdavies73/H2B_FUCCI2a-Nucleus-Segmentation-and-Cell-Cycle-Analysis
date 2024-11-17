@@ -175,9 +175,19 @@ Graphical representation:
 <br>
 _**Fig. 2: Schematic representation of the method used to determine the overall 'colour' of the nucleus of a single H2B_FUCCI2a_MCF7 cell.** Orange dashed lines indicate the mean mCherry or mVenus fluorescence intensity values across the population of control cells (GL2i-transfected) for each biological replicate of the experiment. Nuclei were classified as ‘red’ (corresponding to G1 phase cells) if their mean mCherry-hCdt1 fluorescent signal was greater than the median value for the control population and their mean mVenus-hGeminin fluorescent signal was less than the median for the control population. Nuclei were classified as ‘green’ (corresponding to late S/G2/M phase cells) if their mean mVenus-hGeminin fluorescent signal was greater than the median value for the control population and their mean mCherry-hCdt1 fluorescent signal was less than the median value for the control population. Nuclei were classified as yellow (corresponding to early S phase cells) if both their mean mCherry-hCdt1 and mVenus-hGeminin signals were greater than the median values for the control population. Nuclei were classified as ‘no colour’ where both their mean mCherry-hCdt1 and mVenus-hGeminin signals were less than the median values for the control population._
 
-## Plotting per-nucleus YFP (mVenus-hGeminin) againt RFP (mCherry-hCdt1) fluorescence in Excel to assess cell cycle distribution of cells in different populations
+## Plotting per-nucleus YFP (mVenus-hGeminin) againt RFP (mCherry-hCdt1) fluorescence to assess cell cycle distribution of cells in different populations
 
-Excel - plotting RFP against YFP values for each nucleus, using distribution to estimate cell cycle position of cells
+A useful method to assess changes in the distribution of cells in the cell cycle is to plot per-nucleus background-corrected fluorescence intensities of mVenus-hGeminin (YFP) against mCherry-hCdt1 (RFP) as scatter plots, where each point represents a single cell. These plots for test conditions can be overlaid with the scatter plot of a control condition on the same axes in order to assess changes in cell cycle distribution. 
+
+This can be done by selecting the two columns for per-nucleus background-subtrated RFP and YFP fluorescence intensities in Excel for the condition, then use Insert > Scatter. To overlay control data, right-click the plot > Select Data > 'Add' (under Legend Series) and select the two columns for per-nucleus background-subtrated RFP and YFP fluorescence intensities for control cells. Adjust symbol colours/shapes to differentiate the two conditions on the plot. Ensure axes for plots of different series have the same range to allow comparability between plots. This can be done by right-clicking on the axis > Format Axis and changing the Bounds setting.
+
+Where points are more clustered along the mCherry-hCdt1 (RFP) fluorescence x-axis when compared to control, this represents an increase in nuclei with mVenus-hGeminin levels close to zero and higher levels of mCherry-hCdt1. This indicates an increase in the proportion of 'red'/G1 cells, suggesting a G1 arrest phenotype.
+
+In contrast, where points are more clustered along the mVenus-hGeminin (YFP) fluorescence x-axis when compared to control, this represents an increase in nuclei with mCherry-hCdt1 levels close to zero and higher levels of mVenus-hGeminin. This indicates an increase in the proportion of 'green' or S/G2/M phase cells, suggesting an S/G2/M phase arrest phenotype.
+
+Example:
+  <img src="https://github.com/user-attachments/assets/1b5819f0-e81d-4bdc-8aa0-e458edf90766" width = 400>
+
 
 ## Examples of other analyses which can be performed on FUCCI data
 
