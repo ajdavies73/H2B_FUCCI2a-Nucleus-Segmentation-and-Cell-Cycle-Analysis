@@ -207,7 +207,7 @@ The plots and statistical analyses above were performed in GraphPad Prism 10.
 
 ## Author 
 
-Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
+- Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
 
 Contributors:
 - William Murphy
@@ -215,12 +215,12 @@ Contributors:
 - Catherine Lindon
 
 All files, images and data belong to Lindon Group, Department of Pharmacology, University of Cambridge, UK.
-<br>
-<br>
-&copy; Copyright 2024, Amelie Davies.
 
 ## License
 
+&copy; Copyright 2024, Amelie Davies.
+<br>
+<br>
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0. Unless required by applicable law or agreed to in writing, software
