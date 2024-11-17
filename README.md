@@ -90,11 +90,14 @@ Adapted from https://imagej.net/Nuclei_Watershed_Separation
 5.	Apply thresholding (Image -> Adjust -> Threshold, applying automatic values prob OK and selecting dark background)
 6.	Apply watershed to separate overlapping nuclei (Process -> Binary -> Watershed)
 7.	Extract ROIs from particle analysis (Analyze -> Analyze particles, selecting only ‘Add to Manager’. Adjust size parameters if you want to get rid of any small objects that are not nuclei. I used circularity 0.2–1.0 but you may get better results if you increase circularity). ROIs will appear in the ROI manager window. You can save them via the ‘more’ tab in the ROI manager window.
-8.	Redo step (1) to go back to original image (16 bit) and apply ROIs using ROI manager (click ‘Show all’. You may want to remove individual ROIs (for example nuclei that are off the edge of the image. Select and delete in ROI manager)
-9.	Measure pixel values in the RFP and YFP channel images using the ROIs stored in ROI manager from the steps above (using measure button in the ROI manager window).
-10.	Copy these per-nucleus RFP and YFP fluorescence intensity values into an Excel spreadsheet.
-11.	Take a background value manually by selecting a background ROI appoximately the same size and shape as the nuclei in the image in a region with no cells. Use the ‘measure’ button in the ROI manager to measure the fluorescence intensity of the background region in the RFP and YFP channels. Copy these per-image background values into an Excel spreadsheet.
-12.	Calculate the background-corrected mean per-nucleus RFP and YFP fluorescence intensities by subtracting the mean intensity for the background region in each image from the mean per-nucleus values measured in steps 9-10 for all nuclei in that image. Calculate total per-nucleus fluorescence intensities by multiplying this value by the area of the identified nuclei, shown in the results table outputted by ImageJ.
+
+  	<img src="https://github.com/user-attachments/assets/e0b8df33-62fa-42ac-9c36-71b1a09d9e4a" width = 600>
+
+9.	Redo step (1) to go back to original image (16 bit) and apply ROIs using ROI manager (click ‘Show all’. You may want to remove individual ROIs (for example nuclei that are off the edge of the image. Select and delete in ROI manager)
+10.	Measure pixel values in the RFP and YFP channel images using the ROIs stored in ROI manager from the steps above (using measure button in the ROI manager window).
+11.	Copy these per-nucleus RFP and YFP fluorescence intensity values into an Excel spreadsheet.
+12.	Take a background value manually by selecting a background ROI appoximately the same size and shape as the nuclei in the image in a region with no cells. Use the ‘measure’ button in the ROI manager to measure the fluorescence intensity of the background region in the RFP and YFP channels. Copy these per-image background values into an Excel spreadsheet.
+13.	Calculate the background-corrected mean per-nucleus RFP and YFP fluorescence intensities by subtracting the mean intensity for the background region in each image from the mean per-nucleus values measured in steps 9-10 for all nuclei in that image. Calculate total per-nucleus fluorescence intensities by multiplying this value by the area of the identified nuclei, shown in the results table outputted by ImageJ.
 
 # Section 2 - Analysing per-nucleus intensity data to assess cell cycle phases and progression
 
