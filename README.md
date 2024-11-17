@@ -100,7 +100,7 @@ Parameters for the pipeline can be optimised and tested by uploading your images
   =[Cell containing raw intensity for this nucleus and channel]-INDEX([Cells containing background values for this channel], MATCH([Cell containing image number for this nucleus], [Cells containing image numbers for background values]))  
   
   E.g. for the following data:
-  <img src="https://github.com/user-attachments/assets/8f554883-263e-4d34-ac3f-e144607d06a2">
+  <img src="https://github.com/user-attachments/assets/7c837891-cd6d-4ef0-b087-3034bfae27b9">
 
   For calculating the background-corrected RFP intensity for nucleus 1 of image 1 in cell I3, the formula would be:
 
