@@ -194,7 +194,7 @@ The plots and statistical analyses above were performed in GraphPad Prism 10.
 
 ## Authors 
 
-- Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
+- Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and last updated November 2024.
 
 Contributors:
 - William Murphy
