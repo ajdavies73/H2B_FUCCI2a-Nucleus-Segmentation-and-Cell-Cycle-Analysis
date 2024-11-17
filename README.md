@@ -44,7 +44,12 @@ _**Fig. 1: H2B_FUCCI2a_MCF7 cells expressing the H2B_FUCCI2a tricistronic cell c
 
 ### CellProfiler pipeline
 
-CellProfiler pipeline developed by Amelie Davies, February 2024, for segmentation of nuclei of H2B_FUCCI2a_MCF7 live cell epifluorescence images (cell line developed and described by Matthew Ford, University of Edinburgh, 2017 and Mort et al., 2014). The pipeline then measures fluorescent intensity of each channel in each nucleus automatically, as well as in a manually identified background region. The data is outputted as .csv files, and can be used to assess the position of each cell in the cell cycle based on the relative fluorescent intensities in the RFP and YFP channels, corresponding to mCherry-hCdt1 and mVenus-hGeminin levels respectively.
+This CellProfiler pipeline was developed by Amelie Davies, February 2024, for automatic segmentation of nuclei of H2B_FUCCI2a_MCF7 cells in a large number of epifluorescence images simultaneously. The pipeline then measures per-nucleus fluorescence intensity in each channel automatically, as well as in a manually identified background region. The data is outputted as .csv files, and can be used to assess the position of each cell in the cell cycle based on the relative background-corrected fluorescent intensities in the RFP and YFP channels, corresponding to mCherry-hCdt1 and mVenus-hGeminin levels respectively.
+
+Protocol for using the CellProfiler pipeline:
+1. Download CellProfiler from https://cellprofiler.org/. CellProfiler is a free, open-source software program designed to enable biologists without training in computer vision or programming to quantitatively measure cell phenotypes from thousands of images automatically.
+2. Download the file named CellProfiler FUCCI Cell Cycle Analysis Pipeline (H2B_FUCCI2a_MCF7) Amelie Davies 20241115.cpproj from Section 1A folder in this repository, and open in CellProfiler. This is the custom-designed CellProfiler pipeline for analysing images of H2B_FUCCI2a cells.
+3. 
 
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
