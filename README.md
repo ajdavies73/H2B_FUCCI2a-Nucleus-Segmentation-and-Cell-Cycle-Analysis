@@ -46,10 +46,12 @@ _**Fig. 1: H2B_FUCCI2a_MCF7 cells expressing the H2B_FUCCI2a tricistronic cell c
 
 This CellProfiler pipeline was developed by Amelie Davies, February 2024, for automatic segmentation of nuclei of H2B_FUCCI2a_MCF7 cells in a large number of epifluorescence images simultaneously. The pipeline then measures per-nucleus fluorescence intensity in each channel automatically, as well as in a manually identified background region. The data is outputted as .csv files, and can be used to assess the position of each cell in the cell cycle based on the relative background-corrected fluorescent intensities in the RFP and YFP channels, corresponding to mCherry-hCdt1 and mVenus-hGeminin levels respectively.
 
-Protocol for using the CellProfiler pipeline:
+Parameters for the pipeline can be optimised and tested by uploading your images into the Images tab, extracting metadata as below and pressing 'Start Test Mode' in the bottom left-hand corner. This will allow you to step through each module in the pipeline in turn and display the results from the current parameters. No results will be saved in Test Mode. It is recommended that you test each module in the pipeline for your images before running an analysis. 
+
+#### Protocol for using the CellProfiler pipeline:
 1. Download CellProfiler from https://cellprofiler.org/. CellProfiler is a free, open-source software program designed to enable biologists without training in computer vision or programming to quantitatively measure cell phenotypes from thousands of images automatically.
 2. Download the file named CellProfiler FUCCI Cell Cycle Analysis Pipeline (H2B_FUCCI2a_MCF7) Amelie Davies 20241115.cpproj from Section 1A folder in this repository, and open in CellProfiler. This is the custom-designed CellProfiler pipeline for analysing images of H2B_FUCCI2a cells.
-3. If images from microscopy have been saved into separate folders for each image (e.g. when using MicroManager for image acquisition) and are named according to the image number/condition, use the R script in the Section 1A folder of this repository to merge all .TIFF image files into a single folder for a whole experiment.
+3. If images from microscopy have been saved into separate folders for each image (e.g. when using MicroManager for image acquisition) and are named according to the image number/condition, use the R script in the Section 1A folder of this repository to merge all .TIFF image files into a single folder for a whole experiment (see below).
 4. Load all images for a single condition into the 'Images' module of the CellProfiler pipeline.
 5. Click 'Extract metadata' in the Metadata tab to extract information describing your images from the image file headers, which will be stored along with your measurements.
 6. The NamesAndTypes module allows you to assign a meaningful name to the channels of image by which other modules will refer to it. Use the metadata and Names and Types module to identify channels. E.g.:
@@ -63,7 +65,27 @@ Protocol for using the CellProfiler pipeline:
 - Nucleus diameter: 35-120 pixel units - adjust based on observed diameter of nuclei in your images. 
 - Threshold smoothing scale - smoothing improves the uniformity of the identified objects, and this value may need to be adjusted to improve identification of nuclei. Increasing this value will increase smoothing of CFP staining before thresholding to make identified nuclei more uniform. Decreasing this value will reduce smoothing before thresholding, which may allow more accurate capturing of the detail in nucleus shape in the identified nuclei. The scale should be approximately the size of the artifacts to be eliminated by smoothing. A Gaussian is used with a sigma adjusted so that 1/2 of the Gaussian's distribution falls within the diameter given by the scale (sigma = scale/0.674). 
 - Threshold correction factor - this can be increased to make nucleus identification more stringent, and decrease to make nucleus identification more lenient.
-10. 
+
+  <img src="https://github.com/user-attachments/assets/d6a29d90-eb73-4ce9-af5f-8178575c6279" width = 400>
+
+10. The IdentifyObjectsManually tab allows manual identification of an object to use as the background region for measurement of background intensities in each channel. Press the 'F' key to begin selecting a region, then circle a small region (approximately the same size as the nuclei in the image) in an area with no cells present (indicated by the lack of fluorescent signal in the CFP channel). Click 'Done' once you have finished drawing your background region.
+
+  <img src="https://github.com/user-attachments/assets/6086d228-75f7-4808-a27d-7e48b005badf" width = 400>
+  
+11. The MeasureObjectSizeShape tab measures various size and shape parameters for each nucleus identified from CFP image. We are interested in the circularity of identified nuclei, which will be used by subsequent module 'FilterObjects' to filter nuclei based on measured circularity. No modification to this module is necessary.
+12. The FilterObjects tab filters identified nucleus objects based on their measured circularity to exclude objects with an extreme irregular shape, which may be the result of identification of multiple nuclei as a single nucleus.
+
+    <img src="https://github.com/user-attachments/assets/a30461c3-d458-4813-bb51-d1dd1288da39" width = 400>
+
+13. The MeasureObjectIntensity module measures the intensity of CFP, DIC, RFP and YFP fluorescence within each filtered nucleus. No modification to this module is necessary.
+14. The second MeasureObjectSizeShape module measures various size and shape parameters for each filtered nucleus, including the area of each identified nucleus. No modification to this module is necessary.
+15. The OverlayOutlines module overlays detected outlines of filtered nuclei over the image in the CFP channel for later reference.
+
+    <img src="https://github.com/user-attachments/assets/24f0329e-bf91-4639-8f4d-b4abc12f1a0b" width = 400>
+
+16. The SaveImages module saves the CFP images with overlaid nucleus boundaries to the default output folder, which can be set under File > Preferences... > Default Output Folder. 
+17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. N.B. this module will not produce an output in test mode.
+18. In order to begin analysis of your images, click 'Exit Test Mode' and 'Analyze Images'. This will run an analysis on all uploaded images, and save measurements as .csv files in your default output folder.
 
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
