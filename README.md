@@ -66,22 +66,22 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 - Threshold smoothing scale - smoothing improves the uniformity of the identified objects, and this value may need to be adjusted to improve identification of nuclei. Increasing this value will increase smoothing of CFP staining before thresholding to make identified nuclei more uniform. Decreasing this value will reduce smoothing before thresholding, which may allow more accurate capturing of the detail in nucleus shape in the identified nuclei. The scale should be approximately the size of the artifacts to be eliminated by smoothing. A Gaussian is used with a sigma adjusted so that 1/2 of the Gaussian's distribution falls within the diameter given by the scale (sigma = scale/0.674). 
 - Threshold correction factor - this can be increased to make nucleus identification more stringent, and decrease to make nucleus identification more lenient.
 
-  <img src="https://github.com/user-attachments/assets/29cdceee-de62-4ed7-bf31-4a592250785e" width = 400>
+  <img src="https://github.com/user-attachments/assets/29cdceee-de62-4ed7-bf31-4a592250785e" width = "400">
 
 10. The IdentifyObjectsManually tab allows manual identification of an object to use as the background region for measurement of background intensities in each channel. Press the 'F' key to begin selecting a region, then circle a small region (approximately the same size as the nuclei in the image) in an area with no cells present (indicated by the lack of fluorescent signal in the CFP channel). Click 'Done' once you have finished drawing your background region.
 
-  <img src="https://github.com/user-attachments/assets/6086d228-75f7-4808-a27d-7e48b005badf" width = 400>
+  <img src="https://github.com/user-attachments/assets/6086d228-75f7-4808-a27d-7e48b005badf" width = "400">
   
 11. The MeasureObjectSizeShape tab measures various size and shape parameters for each nucleus identified from CFP image. We are interested in the circularity of identified nuclei, which will be used by subsequent module 'FilterObjects' to filter nuclei based on measured circularity. No modification to this module is necessary.
 12. The FilterObjects tab filters identified nucleus objects based on their measured circularity to exclude objects with an extreme irregular shape, which may be the result of identification of multiple nuclei as a single nucleus.
 
-    <img src="https://github.com/user-attachments/assets/a30461c3-d458-4813-bb51-d1dd1288da39" width = 400>
+    <img src="https://github.com/user-attachments/assets/a30461c3-d458-4813-bb51-d1dd1288da39" width = "400">
 
 13. The MeasureObjectIntensity module measures the intensity of CFP, DIC, RFP and YFP fluorescence within each filtered nucleus. No modification to this module is necessary.
 14. The second MeasureObjectSizeShape module measures various size and shape parameters for each filtered nucleus, including the area of each identified nucleus. No modification to this module is necessary.
 15. The OverlayOutlines module overlays detected outlines of filtered nuclei over the image in the CFP channel for later reference.
 
-    <img src="https://github.com/user-attachments/assets/24f0329e-bf91-4639-8f4d-b4abc12f1a0b" width = 400>
+    <img src="https://github.com/user-attachments/assets/24f0329e-bf91-4639-8f4d-b4abc12f1a0b" width = "400">
 
 16. The SaveImages module saves the CFP images with overlaid nucleus boundaries to the default output folder, which can be set under File > Preferences... > Default Output Folder. 
 17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. Change ConditionName in the name of the output files before running analysis. N.B. this module will not produce an output in test mode. 
@@ -147,11 +147,11 @@ Adapted from https://imagej.net/Nuclei_Watershed_Separation. Download ImageJ/FIJ
 6.	Apply watershed to separate overlapping nuclei (Process -> Binary -> Watershed)
 7.	Extract ROIs from particle analysis (Analyze -> Analyze particles, selecting only ‘Add to Manager’. Adjust size parameters if you want to get rid of any small objects that are not nuclei. I used circularity 0.2–1.0 but you may get better results if you increase circularity). ROIs will appear in the ROI manager window. You can save them via the ‘more’ tab in the ROI manager window.
 
-  	<img src="https://github.com/user-attachments/assets/e0b8df33-62fa-42ac-9c36-71b1a09d9e4a" width = 400>
+  	<img src="https://github.com/user-attachments/assets/e0b8df33-62fa-42ac-9c36-71b1a09d9e4a" width = "400">
 
 8.	Redo step (1) to go back to original image (16 bit) and apply ROIs using ROI manager (click ‘Show all’. You may want to remove individual ROIs (for example nuclei that are off the edge of the image. Select and delete in ROI manager)
 
-  	<img src="https://github.com/user-attachments/assets/1418f113-7e0b-43d8-ad39-8396a33f7b07" width = 400>
+  	<img src="https://github.com/user-attachments/assets/1418f113-7e0b-43d8-ad39-8396a33f7b07" width = "400">
 
 9.	Measure pixel values in the RFP and YFP channel images using the ROIs stored in ROI manager from the steps above (using measure button in the ROI manager window).
 10.	Copy these per-nucleus RFP and YFP fluorescence intensity values into an Excel spreadsheet.
@@ -187,7 +187,7 @@ In contrast, where points are more clustered along the mVenus-hGeminin (YFP) flu
 
 Example scatter plot:
 <br>
-  <img src="https://github.com/user-attachments/assets/be277206-9001-45c1-b509-8ac2cec07df8" width = 400>
+  <img src="https://github.com/user-attachments/assets/be277206-9001-45c1-b509-8ac2cec07df8" width = "400">
   <br>
 _**Fig. 3: Representative scatter plot of per-nucleus values for intensity of fluorescence produced by mCherry-hCdt1 and mVenus-hGeminin (with subtracted image background fluorescence intensity).** Control nuclei are plotted as black squares and the experimental condition as orange circles overlaid on control data. In this example, points for the experimental condition (orange) are more clustered along the mCherry-hCdt1 (RFP) fluorescence x-axis than for the control. This represents an increase in nuclei with mVenus-hGeminin levels close to zero and higher levels of mCherry-hCdt1. This indicates an increase in the proportion of 'red'/G1 cells, suggesting a G1 arrest phenotype._
 <br>
@@ -201,7 +201,6 @@ Another useful analysis which can be performed on the per-nucleus background-cor
   - Bar chart of log(geometric mean) of mCherry:mVenus ratios (geometric mean is used to deal with the extreme maximum and minimum values produced when calculating these ratios for a population of cells).
     <br>
     <img src="https://github.com/user-attachments/assets/60b4bd16-dc14-4293-b8b6-4eac8c4a7589" width = "300">
-    <br>
     <br>
 
 The plots and statistical analyses above were performed in GraphPad Prism 10.
