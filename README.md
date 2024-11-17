@@ -120,6 +120,8 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 
 An example Excel spreadsheet for pooling and manipulating results from different conditions in this manner can be found in the Section 1A folder of this repository.
 
+25. Copy the negative-corrected background-subtracted columns for per-nucleus RFP and YFP intensities into a new spreadsheet for each condition, named with the condition name and saved as a CSV file. This is used for downstream analysis in R (see Section 2). An example CSV file for one condition can be found in the Section 1A folder of this repository: [a link]([Section 1A - CellProfiler method for per-nucleus and background fluorescence intensity measurement/Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding.csv](https://github.com/ajdavies73/H2B_FUCCI2a-Cell-Segmentation-and-Cell-Cycle-Analysis/blob/f3bc95ba07a28ca99af2c67f1a60d218f29ca0a3/Section%201A%20-%20CellProfiler%20method%20for%20per-nucleus%20and%20background%20fluorescence%20intensity%20measurement/Example%20CSV%20file%20for%20single%20condition%20background%20subtracted%20per-nucleus%20fluorescence%20intensities%20for%20thresholding.csv))
+
 ### Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
 
 ### R script to merge images into a single folder
