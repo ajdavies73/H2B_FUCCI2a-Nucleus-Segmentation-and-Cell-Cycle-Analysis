@@ -160,9 +160,9 @@ Adapted from https://imagej.net/Nuclei_Watershed_Separation. Download ImageJ/FIJ
 
 # Section 2 - Analysing per-nucleus intensity data to assess cell cycle phases and progression
 
-## FUCCI thresholding code
+## Assigning overall colours to individual nuclei using R
 
-This script can be used to classify nuclei from a single condition as red (corresponding to G1 phase), green (S/G2/M phase), yellow (S phase) or no-colour (G0). The proportions of nuclei of each colour in the sample are calculated and plotted as a stacked bar chart.
+[This R script](https://github.com/ajdavies73/H2B_FUCCI2a-Cell-Segmentation-and-Cell-Cycle-Analysis/blob/dc25ad06dd17e4ad36024b01370346215f9eb268/Section%202%20-%20FUCCI2a%20cell%20cycle%20analysis%20using%20fluorescence%20intensity%20data%20from%20CellProfiler%20or%20ImageJ/FUCCI2a%20nucleus%20colour%20determination.R) can be used to classify nuclei from a single condition as red (corresponding to G1 phase), green (S/G2/M phase), yellow (S phase) or no-colour (G0). The number of nuclei of each colour are outputted, and the proportions of nuclei of each colour in the sample are calculated and plotted as a stacked bar chart.
 
 N.B. your .csv file for the condition to be analysed must be formatted as two columns with the headers 'RFPminusBG' and 'YFPminusBG'. These should contain the per-nucleus mean intensities of RFP and YFP fluorescence with the background RFP and YFP fluorescence intensity for the image subtracted respectively. Each row in the file should represent a single nucleus.
 
@@ -175,9 +175,12 @@ Graphical representation:
 <br>
 _**Fig. 2: Schematic representation of the method used to determine the overall 'colour' of the nucleus of a single H2B_FUCCI2a_MCF7 cell.** Orange dashed lines indicate the mean mCherry or mVenus fluorescence intensity values across the population of control cells (GL2i-transfected) for each biological replicate of the experiment. Nuclei were classified as ‘red’ (corresponding to G1 phase cells) if their mean mCherry-hCdt1 fluorescent signal was greater than the median value for the control population and their mean mVenus-hGeminin fluorescent signal was less than the median for the control population. Nuclei were classified as ‘green’ (corresponding to late S/G2/M phase cells) if their mean mVenus-hGeminin fluorescent signal was greater than the median value for the control population and their mean mCherry-hCdt1 fluorescent signal was less than the median value for the control population. Nuclei were classified as yellow (corresponding to early S phase cells) if both their mean mCherry-hCdt1 and mVenus-hGeminin signals were greater than the median values for the control population. Nuclei were classified as ‘no colour’ where both their mean mCherry-hCdt1 and mVenus-hGeminin signals were less than the median values for the control population._
 
-## Other analysis
+## Plotting per-nucleus YFP (mVenus-hGeminin) againt RFP (mCherry-hCdt1) fluorescence in Excel to assess cell cycle distribution of cells in different populations
 
 Excel - plotting RFP against YFP values for each nucleus, using distribution to estimate cell cycle position of cells
+
+## Examples of other analyses which can be performed on FUCCI data
+
 Komolgorov-Smirnov line plots of RFP/YFP ratios against frequency
 Plot log(mVenus/mCherry) ratio relative to GL2i
 
