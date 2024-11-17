@@ -66,7 +66,7 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 - Threshold smoothing scale - smoothing improves the uniformity of the identified objects, and this value may need to be adjusted to improve identification of nuclei. Increasing this value will increase smoothing of CFP staining before thresholding to make identified nuclei more uniform. Decreasing this value will reduce smoothing before thresholding, which may allow more accurate capturing of the detail in nucleus shape in the identified nuclei. The scale should be approximately the size of the artifacts to be eliminated by smoothing. A Gaussian is used with a sigma adjusted so that 1/2 of the Gaussian's distribution falls within the diameter given by the scale (sigma = scale/0.674). 
 - Threshold correction factor - this can be increased to make nucleus identification more stringent, and decrease to make nucleus identification more lenient.
 
-  <img src="https://github.com/user-attachments/assets/d6a29d90-eb73-4ce9-af5f-8178575c6279" width = 400>
+  <img src="https://github.com/user-attachments/assets/29cdceee-de62-4ed7-bf31-4a592250785e" width = 400>
 
 10. The IdentifyObjectsManually tab allows manual identification of an object to use as the background region for measurement of background intensities in each channel. Press the 'F' key to begin selecting a region, then circle a small region (approximately the same size as the nuclei in the image) in an area with no cells present (indicated by the lack of fluorescent signal in the CFP channel). Click 'Done' once you have finished drawing your background region.
 
@@ -86,6 +86,8 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 16. The SaveImages module saves the CFP images with overlaid nucleus boundaries to the default output folder, which can be set under File > Preferences... > Default Output Folder. 
 17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. N.B. this module will not produce an output in test mode.
 18. In order to begin analysis of your images, click 'Exit Test Mode' and 'Analyze Images'. This will run an analysis on all uploaded images, and save measurements as .csv files in your default output folder.
+
+### Formatting the output of the CellProfiler pipeline
 
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
