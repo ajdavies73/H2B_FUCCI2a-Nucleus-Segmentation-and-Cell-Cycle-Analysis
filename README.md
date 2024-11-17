@@ -205,14 +205,21 @@ Another useful analysis which can be performed on the per-nucleus background-cor
 
 The plots and statistical analyses above were performed in GraphPad Prism 10.
 
-## Licensing 
+## Author 
 
-Written by Amelie Davies, March 2024 and updated November 2024.
+Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
+<br>
+Contributors:
+- William Murphy
+- Annabel Cardno
+- Catherine Lindon
 <br>
 All files, images and data belong to Lindon Group, Department of Pharmacology, University of Cambridge, UK.
 <br>
 <br>
 &copy; Copyright 2024, Amelie Davies.
+
+## License
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
