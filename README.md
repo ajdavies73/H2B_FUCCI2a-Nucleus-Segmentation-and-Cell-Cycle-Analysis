@@ -49,7 +49,21 @@ This CellProfiler pipeline was developed by Amelie Davies, February 2024, for au
 Protocol for using the CellProfiler pipeline:
 1. Download CellProfiler from https://cellprofiler.org/. CellProfiler is a free, open-source software program designed to enable biologists without training in computer vision or programming to quantitatively measure cell phenotypes from thousands of images automatically.
 2. Download the file named CellProfiler FUCCI Cell Cycle Analysis Pipeline (H2B_FUCCI2a_MCF7) Amelie Davies 20241115.cpproj from Section 1A folder in this repository, and open in CellProfiler. This is the custom-designed CellProfiler pipeline for analysing images of H2B_FUCCI2a cells.
-3. 
+3. If images from microscopy have been saved into separate folders for each image (e.g. when using MicroManager for image acquisition) and are named according to the image number/condition, use the R script in the Section 1A folder of this repository to merge all .TIFF image files into a single folder for a whole experiment.
+4. Load all images for a single condition into the 'Images' module of the CellProfiler pipeline.
+5. Click 'Extract metadata' in the Metadata tab to extract information describing your images from the image file headers, which will be stored along with your measurements.
+6. The NamesAndTypes module allows you to assign a meaningful name to the channels of image by which other modules will refer to it. Use the metadata and Names and Types module to identify channels. E.g.:
+    CFP channel: used to image mCerulean-H2B fluorescence, allowing identification of entire nucleus throughout the cell cycle. This facilitates single-cell tracking.
+    YFP channel: used to image mVenus-hGemini fluorescence, accumulating in S/G2/M phase nuclei and allowing identification of cells in S/G2/M.
+    RFP channel: used to image mCherry-hCdt1 fluorescence, accumulating in G1 phase nuclei and allowing identification of cells in G1.
+    DIC channel: differential interference contrast (DIC) images of cells, enhancing contrast of brightfield images for visualisation of transparent whole cells.
+This tab is currently configured to automatically assign frame 0 of each image as CFP, frame 1 as YFP, frame 2 as RFP and frame 3 as DIC. Before continuing, ensure that the frame numbers associated with each channel match those associated with your image files! This may also need to be changed to C matching or ChannelName matching depending on your image files.
+8. Click 'Update' at the bottom of the NamesAndTypes page to automatically split each image into its constituent channels/frames as described above. Each individual channel is shown in its own labelled column.
+9. The IdentifyPrimaryObjects tab automatically identifies nuclei based on mCerulean-H2B fluorescence in the CFP channel of each image. Adapt thresholding based on your images to optimise nucleus identification. Identified nuclei are declumped based on object shape where they are clustered in an image and cannot initially be identified as separate objects. In order to optimise thresholding, the following parameters can be adjusted:
+    Nucleus diameter: 35-120 pixel units - adjust based on observed diameter of nuclei in your images. 
+    Threshold smoothing scale - smoothing improves the uniformity of the identified objects, and this value may need to be adjusted to improve identification of nuclei. Increasing this value will increase smoothing of CFP staining before thresholding to make identified nuclei more uniform. Decreasing this value will reduce smoothing before thresholding, which may allow more accurate capturing of the detail in nucleus shape in the identified nuclei. The scale should be approximately the size of the artifacts to be eliminated by smoothing. A Gaussian is used with a sigma adjusted so that 1/2 of the Gaussian's distribution falls within the diameter given by the scale (sigma = scale/0.674). 
+    Threshold correction factor - this can be increased to make nucleus identification more stringent, and decrease to make nucleus identification more lenient.
+10. 
 
 ### Example Excel spreadsheet for pooling results from different conditions and background subtraction
 
