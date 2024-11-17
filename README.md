@@ -84,7 +84,7 @@ Parameters for the pipeline can be optimised and tested by uploading your images
     <img src="https://github.com/user-attachments/assets/24f0329e-bf91-4639-8f4d-b4abc12f1a0b" width = 400>
 
 16. The SaveImages module saves the CFP images with overlaid nucleus boundaries to the default output folder, which can be set under File > Preferences... > Default Output Folder. 
-17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. N.B. this module will not produce an output in test mode.
+17. The ExportToSpreadsheet module exports intensity/size and shape data to an Excel spreadsheet, saved in the default output folder, which can be set under File > Preferences... > Default Output Folder. Change ConditionName in the name of the output files before running analysis. N.B. this module will not produce an output in test mode. 
 18. In order to begin analysis of your images, click 'Exit Test Mode' and 'Analyze Images'. This will run an analysis on all uploaded images, and save measurements as .csv files in your default output folder.
 
 #### Formatting the output of the CellProfiler pipeline:
@@ -93,13 +93,13 @@ Parameters for the pipeline can be optimised and tested by uploading your images
   - Tab 1 - per-nucleus area and intensity measurements
   - Tab 2 - per-image background intensity measurements
   - Tab 3 - background-correction of per-nucleus intensity measurements and analysis
-21.  Open the NucleusSegmentation_FilteredNuclei.csv file for each condition. This displays measurements made for each filtered nucleus object from each image analysed in the pipeline. Copy the following columns into the associated sheet of the new Excel file for each condition:
+21.  Open the NucleusSegmentation_ConditionName_FilteredNuclei.csv file for each condition. This displays measurements made for each filtered nucleus object from each image analysed in the pipeline. Copy the following columns into the associated sheet of the new Excel file for each condition:
     - ImageNumber
     - ObjectNumber
     - AreaShape_Area
     - Intensity_MeanIntensity_RFP
     - Intensity_MeanIntensity_YFP
-22. Open the NucleusSegmentation_Background_Intensity.csv file for each condition, and copy the following columns into the associated sheet of the new Excel file for each condition:
+22. Open the NucleusSegmentation_ConditionName_Background_Intensity.csv file for each condition, and copy the following columns into the associated sheet of the new Excel file for each condition:
     - ImageNumber
     - ObjectNumber
     - Intensity_MeanIntensity_RFP
