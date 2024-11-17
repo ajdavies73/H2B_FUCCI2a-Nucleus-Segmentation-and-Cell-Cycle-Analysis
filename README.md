@@ -53,10 +53,10 @@ Protocol for using the CellProfiler pipeline:
 4. Load all images for a single condition into the 'Images' module of the CellProfiler pipeline.
 5. Click 'Extract metadata' in the Metadata tab to extract information describing your images from the image file headers, which will be stored along with your measurements.
 6. The NamesAndTypes module allows you to assign a meaningful name to the channels of image by which other modules will refer to it. Use the metadata and Names and Types module to identify channels. E.g.:
-    CFP channel: used to image mCerulean-H2B fluorescence, allowing identification of entire nucleus throughout the cell cycle. This facilitates single-cell tracking.
-    YFP channel: used to image mVenus-hGemini fluorescence, accumulating in S/G2/M phase nuclei and allowing identification of cells in S/G2/M.
-    RFP channel: used to image mCherry-hCdt1 fluorescence, accumulating in G1 phase nuclei and allowing identification of cells in G1.
-    DIC channel: differential interference contrast (DIC) images of cells, enhancing contrast of brightfield images for visualisation of transparent whole cells.
+- CFP channel: used to image mCerulean-H2B fluorescence, allowing identification of entire nucleus throughout the cell cycle. This facilitates single-cell tracking.
+- YFP channel: used to image mVenus-hGemini fluorescence, accumulating in S/G2/M phase nuclei and allowing identification of cells in S/G2/M.
+- RFP channel: used to image mCherry-hCdt1 fluorescence, accumulating in G1 phase nuclei and allowing identification of cells in G1.
+- DIC channel: differential interference contrast (DIC) images of cells, enhancing contrast of brightfield images for visualisation of transparent whole cells.
 This tab is currently configured to automatically assign frame 0 of each image as CFP, frame 1 as YFP, frame 2 as RFP and frame 3 as DIC. Before continuing, ensure that the frame numbers associated with each channel match those associated with your image files! This may also need to be changed to C matching or ChannelName matching depending on your image files.
 8. Click 'Update' at the bottom of the NamesAndTypes page to automatically split each image into its constituent channels/frames as described above. Each individual channel is shown in its own labelled column.
 9. The IdentifyPrimaryObjects tab automatically identifies nuclei based on mCerulean-H2B fluorescence in the CFP channel of each image. Adapt thresholding based on your images to optimise nucleus identification. Identified nuclei are declumped based on object shape where they are clustered in an image and cannot initially be identified as separate objects. In order to optimise thresholding, the following parameters can be adjusted:
