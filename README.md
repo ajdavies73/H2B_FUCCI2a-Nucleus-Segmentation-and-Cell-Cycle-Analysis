@@ -104,9 +104,10 @@ Parameters for the pipeline can be optimised and tested by uploading your images
     - ObjectNumber
     - Intensity_MeanIntensity_RFP
     - Intensity_MeanIntensity_YFP
-23. In the analysis tab for each condition, copy the data for the per-image background values and per-nucleus intensity values into adjacent tables. Calculate the background-corrected intensoty values for each nucleus using the following formula in Excel:
+23. In the analysis tab for each condition, copy the data for the per-image background values and per-nucleus intensity values into adjacent tables. Calculate the background-corrected intensity values for each nucleus using the following formula in Excel:
 
-  [Cell containing raw intensity for this nucleus and channel]-INDEX([Cells containing background values for this channel], MATCH([Cell containing image number for this nucleus], [Cells containing image numbers for background values]))    
+  =[Cell containing raw intensity for this nucleus and channel]-INDEX([Cells containing background values for this channel], MATCH([Cell containing image number for this nucleus], [Cells containing image numbers for background values]))  
+  
   E.g. for the following data:
   <img src="https://github.com/user-attachments/assets/8f554883-263e-4d34-ac3f-e144607d06a2">
 
@@ -115,10 +116,9 @@ Parameters for the pipeline can be optimised and tested by uploading your images
   =G3-INDEX($B$3:$B$7, MATCH(E3, $A$3:$A$7))
 
   This finds the background value in the RFP channel for the image number matching the image number from which the nucleus in row 3 was taken, and subtracts it from the measured RFP intensity for that nucleus.
-  
+24. On these two columns containing background-subtracted RFP and YFP intensities for each nucleus, use Conditional Formatting > Highlight Cells Rules > Less Than and set cells less than 0 to be highlighted in red. This will highlight any cells where the intensity is less than 0 following background subtraction. These cells must be set to a positive value (e.g. 1x10^-10) in order to allow calculation of RFP:YFP intensity ratios downstream. Do this in a new set of columns by copying the background-subtracted intensity columns and changing any highlighted cells to the chosen very small positive value.
 
-
-### Example Excel spreadsheet for pooling results from different conditions and background subtraction
+An example Excel spreadsheet for pooling and manipulating results from different conditions in this manner can be found in the Section 1A folder of this repository.
 
 ### Example CSV file for single condition background subtracted per-nucleus fluorescence intensities for thresholding
 
