@@ -193,12 +193,15 @@ _**Fig. 3: Representative scatter plot of per-nucleus values for intensity of fl
 <br>
 ## Examples of other analyses which can be performed on FUCCI data
 
-Komolgorov-Smirnov line plots of RFP/YFP ratios against frequency
-Plot log(mVenus/mCherry) ratio relative to GL2i
+Another useful analysis which can be performed on the per-nucleus background-corrected fluorescence intensities of mVenus-hGeminin (YFP) against mCherry-hCdt1 (RFP) levels is to calculate the mCherry:mVenus ratio for each nucleus by dividing the mCherry-hCdt1 value by the mVenus-hGeminin value for each nucleus in Excel. The higher this value, the more 'red' the cell is and therefore the more likely the cell is to be in G1 phase. In contrast, the lower this value, the more 'green' the cell is and the more likely it is to be in S/G2/M phase. Examples of how these can be analysed include:
+  - Frequency distribution of per-nucleus mCherry:mVenus ratios. The shallower the slope of this curve, the higher the proportion of nuclei with high mCherry:mVenus ratios, suggesting an increase in the proportion of cells in G1 phase.
+    <img src="https://github.com/user-attachments/assets/9454dc8e-ba98-4838-a1c5-b2f33c4a4b57" width = 400>
+  - Bar chart of log(geometric mean) of mCherry:mVenus ratios (geometric mean is used to deal with the extreme maximum and minimum values produced when calculating these ratios for a population of cells).
+    <img src="https://github.com/user-attachments/assets/60b4bd16-dc14-4293-b8b6-4eac8c4a7589" width = 400>
 
-Look at stats for each and example data/figures
+The plots and statistical analyses above were performed in GraphPad Prism 10.
 
-## Outro 
+## Licensing 
 
 Written by Amelie Davies, March 2024 and updated November 2024.
 <br>
