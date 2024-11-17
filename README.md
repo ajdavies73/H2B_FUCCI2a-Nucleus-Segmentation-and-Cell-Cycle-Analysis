@@ -190,7 +190,7 @@ Example scatter plot:
   <img src="https://github.com/user-attachments/assets/be277206-9001-45c1-b509-8ac2cec07df8" width = "400">
   <br>
 _**Fig. 3: Representative scatter plot of per-nucleus values for intensity of fluorescence produced by mCherry-hCdt1 and mVenus-hGeminin (with subtracted image background fluorescence intensity).** Control nuclei are plotted as black squares and the experimental condition as orange circles overlaid on control data. In this example, points for the experimental condition (orange) are more clustered along the mCherry-hCdt1 (RFP) fluorescence x-axis than for the control. This represents an increase in nuclei with mVenus-hGeminin levels close to zero and higher levels of mCherry-hCdt1. This indicates an increase in the proportion of 'red'/G1 cells, suggesting a G1 arrest phenotype._
-<br>
+
 ## Examples of other analyses which can be performed on FUCCI data
 
 Another useful analysis which can be performed on the per-nucleus background-corrected fluorescence intensities of mVenus-hGeminin (YFP) against mCherry-hCdt1 (RFP) levels is to calculate the mCherry:mVenus ratio for each nucleus by dividing the mCherry-hCdt1 value by the mVenus-hGeminin value for each nucleus in Excel. The higher this value, the more 'red' the cell is and therefore the more likely the cell is to be in G1 phase. In contrast, the lower this value, the more 'green' the cell is and the more likely it is to be in S/G2/M phase. Examples of how these can be analysed include:
@@ -205,7 +205,7 @@ Another useful analysis which can be performed on the per-nucleus background-cor
 
 The plots and statistical analyses above were performed in GraphPad Prism 10.
 
-## Author 
+## Authors 
 
 - Written by [Amelie Davies](https://github.com/ajdavies73), March 2024 and updated November 2024.
 
