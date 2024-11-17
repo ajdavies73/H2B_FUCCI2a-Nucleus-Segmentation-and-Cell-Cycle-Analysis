@@ -81,7 +81,7 @@ Method for automating measurement of per-nucleus RFP and YFP fluorescence intens
 
 This allows downstream analysis of cell cycle progression in the images identified using the relative levels of mCherry-hCdt1 and mVenus-Geminin fluorescence. 
 
-Adapted from https://imagej.net/Nuclei_Watershed_Separation
+Adapted from https://imagej.net/Nuclei_Watershed_Separation. Download ImageJ/FIJI from https://imagej.net/ij/download.html.
 
 1.	Open stack and split (Image -> Stacks -> Stack to images)
 2.	Select blue channel image (CFP) and optimize brightness (Adjust -> Brightness & Contrast -> auto)
