@@ -106,7 +106,7 @@ Parameters for the pipeline can be optimised and tested by uploading your images
 
   =G3-INDEX($B$3:$B$7, MATCH(E3, $A$3:$A$7))
 
-  This finds the background value in the RFP channel for the image number matching the image number from which the nucleus in row 3 was taken, and subtracts it from the measured RFP intensity for that nucleus.
+  This finds the background value in the RFP channel for the image number matching the image number from which the nucleus in row 3 was taken, and subtracts it from the measured RFP intensity for that nucleus. At this point, you can find the whole-nucleus level of RFP/YFP fluorescence for each cell by multiplying by the area of the nucleus, and you can carry out the following data analysis using these whole-cell levels rather than mean levels if preferred.
 24. On these two columns containing background-subtracted RFP and YFP intensities for each nucleus, use Conditional Formatting > Highlight Cells Rules > Less Than and set cells less than 0 to be highlighted in red. This will highlight any cells where the intensity is less than 0 following background subtraction. These cells must be set to a positive value (e.g. 1x10^-10) in order to allow calculation of RFP:YFP intensity ratios downstream. Do this in a new set of columns by copying the background-subtracted intensity columns and changing any highlighted cells to the chosen very small positive value.
 25. Copy the negative-corrected background-subtracted columns for per-nucleus RFP and YFP intensities into a new spreadsheet for each condition, named with the condition name and saved as a CSV file. Ensure the column headers are 'RFPminusBG' and 'YFPminusBG'. This file can be used for downstream analysis in R (see Section 2).
 
